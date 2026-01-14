@@ -1,0 +1,151 @@
+:root {
+    --blue: #0077b6;
+    --dark-blue: #023e8a;
+    --bg: #f4faff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--bg);
+}
+
+/* HEADER */
+header {
+    background: var(--blue);
+    color: white;
+    padding: 15px;
+    position: sticky;
+    top: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#burger {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+}
+
+/* HERO */
+.hero {
+    display: flex;
+    align-items: center;
+    padding: 40px;
+    gap: 30px;
+}
+
+.hero img {
+    width: 50%;
+    border-radius: 15px;
+}
+
+.hero-text {
+    max-width: 500px;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: var(--blue);
+    color: white;
+    border-radius: 5px;
+}
+
+/* SECTIONS */
+.section {
+    max-width: 900px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.section img {
+    width: 100%;
+    max-width: 600px;
+    margin-top: 15px;
+    border-radius: 10px;
+}
+
+/* CARDS */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: 40px auto;
+}
+
+.card {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+/* FOOTER */
+footer {
+    background: var(--dark-blue);
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    ul {
+        display: none;
+        flex-direction: column;
+        background: var(--blue);
+        position: absolute;
+        right: 0;
+        top: 60px;
+        padding: 10px;
+    }
+
+    ul.active {
+        display: flex;
+    }
+
+    #burger {
+        display: block;
+    }
+
+    .hero {
+        flex-direction: column;
+    }
+
+    .hero img {
+        width: 100%;
+    }
+}
